@@ -1,6 +1,6 @@
 # Python CRUD Application for Rental Car
 
-A comprehensive Python application for managing rental car data with Create, Read, Update, and Delete (CRUD) operations.
+A comprehensive Python application for managing rental car data with Create, Read, Update, Delete, order, and check customer (CRUD) operations with 2 POV, customer and admin.
 
 ## Business Understanding
 
@@ -19,6 +19,7 @@ This application is designed for admin and customer who want rent a car to facil
 
 ## Features
 
+### ADMIN
 * **Create:**
     * Add new rental car data entries with essential details like license plate, car brand, car type, year, price, available.
     * Implement validation rules to ensure license plate not same in rental car data.
@@ -30,9 +31,20 @@ This application is designed for admin and customer who want rent a car to facil
     * Provide clear confirmation or error messages based on update success or failure.
 * **Delete:**
     * Allow for the removal of unwanted rental car records with appropriate authorization checks.
+* **Customer:**
+    * check all customer who rent a car
+    * can submit customer who want rent a car.
 * **Security:**
     * Implement user authentication and authorization mechanisms (if sensitive data is involved) to control access to different CRUD operations.
     * The security used is to enter a username and password for the admin, and for customers do not need to enter username and password.
+      
+### CUSTOMER
+* **Read:**
+    * Search and retrieve specific rental car records by applying filters based on license plate.
+    * Display comprehensive information for each rental car in a user-friendly format.
+  * **order:**
+    * booking a car and waiting acc by admin
+  
 
 ## Installation
 
@@ -58,6 +70,7 @@ This application is designed for admin and customer who want rent a car to facil
     * **Read:** Search and retrieve car information by license plate.
     * **Update:** Modify car details, such as updating their license plate until available car .
     * **Delete:** Remove a car record from the system with license plate.
+    * **Order:** booking a car with license plate and waiting acc by admin.
 
 ## Data Model
 This project utilizes a dictionary in python code to represent rental car data. The following fields are typically stored:
@@ -67,6 +80,13 @@ This project utilizes a dictionary in python code to represent rental car data. 
    * year :int- description year for car.
    * price : int- price rent a car for one day.
    * available : bool- car is available or no for rental car.
+
+and customer data, the following dields are typically stored:
+   * license plate: str - primary key in data rental car and to describe license plate from car
+   * customer name : str - name customer who rent a car.
+   * number telphone :str - number telphone for communication with customer.
+   * rent date :str - start date of rental.
+   * return date : str- end date of rental.
 
 ## Contributing
 We welcome contributions to this project! Please feel free to open a pull request, sent to ghaisanrabbani5@gmail.com or submit an issue if you encounter any problems or have suggestions for improvements.
